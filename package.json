@@ -1,0 +1,22 @@
+{
+	"name": "fff-sideprocess-effect",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rektide/fff-sideprocess-effect.git"
+	},
+	"keywords": [],
+	"author": "rektide de la faye",
+	"license": "MIT",
+	"type": "module",
+	"bugs": {
+		"url": "https://github.com/rektide/fff-sideprocess-effect/issues"
+	},
+	"homepage": "https://github.com/rektide/fff-sideprocess-effect#readme",
+	"module": "fff-sideprocess-effect.js"
+}
