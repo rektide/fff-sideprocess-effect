@@ -1,22 +1,48 @@
 {
-	"name": "fff-sideprocess-effect",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/rektide/fff-sideprocess-effect.git"
-	},
-	"keywords": [],
-	"author": "rektide de la faye",
-	"license": "MIT",
-	"type": "module",
-	"bugs": {
-		"url": "https://github.com/rektide/fff-sideprocess-effect/issues"
-	},
-	"homepage": "https://github.com/rektide/fff-sideprocess-effect#readme",
-	"module": "fff-sideprocess-effect.js"
+  "name": "@ff-labs/fff-sideprocess-effect",
+  "version": "0.1.0",
+  "description": "Scoped Effect adapter for the explicit FFF sideprocess executable",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./source": "./src/index.ts",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsgo -p tsconfig.build.json",
+    "typecheck": "tsgo --noEmit -p tsconfig.json",
+    "test": "bun test test/",
+    "prepack": "npm run build"
+  },
+  "peerDependencies": {
+    "effect": "4.0.1",
+    "effect-watch-plus": "1.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@effect/platform-node": "4.0.1",
+    "@effect/platform-node-shared": "4.0.1",
+    "@ff-labs/fff-bun": "*",
+    "@types/bun": "1.4.0",
+    "@types/node": "26.6.5",
+    "@typescript/native-preview": "7.0.0-dev.20251207.1",
+    "effect": "4.0.1",
+    "effect-watch-plus": "github:rektide/effect-watch-plus#main"
+  },
+  "dependencies": {
+    "@ff-labs/fff-effect": "github:rektide/fff-effect#912b46359b52eb0c185a6d32c65410eb41bde13c"
+  }
 }
